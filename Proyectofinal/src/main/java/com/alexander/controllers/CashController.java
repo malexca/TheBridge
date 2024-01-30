@@ -31,7 +31,7 @@ public class CashController {
 	@Autowired
 	VehicleRepository vehicleRepository;
 	@GetMapping("/cash") 
-	
+	// ResponseEntity me permite encapsular
 	public ResponseEntity<List<Cash>> getAll(@RequestParam(required = false) Date date) {
 		List<Cash> res = new ArrayList<>();
 		if (date == null) {
