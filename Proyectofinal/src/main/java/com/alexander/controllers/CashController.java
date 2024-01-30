@@ -28,7 +28,7 @@ public class CashController {
 		if (date == null) {
 			cashRepository.findAll().forEach(res::add);
 		} else {
-			cashRepository.findByDateContaining(date).forEach(res::add);
+			cashRepository.findByDate(date).forEach(res::add);
 		}
 		if (res.isEmpty()) {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);

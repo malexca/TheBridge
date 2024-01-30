@@ -11,7 +11,7 @@ import jakarta.transaction.Transactional;
 
 public interface CashRepository extends JpaRepository<Cash, Integer> {
 	
-	List <Cash> findByDateContaining (Date date);
+	List <Cash> findByDate (Date date);
 	List <Cash> findByVehicleVehicleId(int id);
 	
 	@Transactional
